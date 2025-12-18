@@ -1,32 +1,24 @@
-import { useEffect } from 'react';
-import { db } from './firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import Header from './components/common/Header';
+import Calendar from './components/Calendar/Calendar';
+import Memo from './components/Memo/Memo';
 
 function App() {
-  useEffect(() => {
-    // Firebase 연결 테스트
-    const testFirebase = async () => {
-      try {
-        const testCollection = collection(db, 'test');
-        const snapshot = await getDocs(testCollection);
-        console.log('✅ Firebase 연결 성공!');
-        console.log('문서 개수:', snapshot.size);
-      } catch (error) {
-        console.error('❌ Firebase 연결 실패:', error);
-      }
-    };
-    
-    testFirebase();
-  }, []);
-
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-4xl font-bold text-center text-blue-600">
-        Weekly Planner
-      </h1>
-      <p className="text-center mt-4 text-gray-600">
-        Firebase 연결 테스트 중... 콘솔을 확인하세요!
-      </p>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <main className="container mx-auto px-4 py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* 주간 달력 (왼쪽, 넓게) */}
+          <div className="lg:col-span-2">
+            <Calendar />
+          </div>
+          
+          {/* 메모 영역 (오른쪽) */}
+          <div className="lg:col-span-1">
+            <Memo />
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
