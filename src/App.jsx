@@ -1,4 +1,5 @@
 import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 import Calendar from './components/Calendar/Calendar';
 import Memo from './components/Memo/Memo';
 
@@ -19,6 +20,7 @@ function App() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -13,7 +13,7 @@ function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold text-gray-800">
-            📅 Weekly Planner
+            주간 플래너
           </h1>
           <p className="text-gray-600">{dateString}</p>
         </div>
