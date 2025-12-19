@@ -4,12 +4,12 @@
 
 ### 폴더 명명 규칙
 - **PascalCase (대문자 시작)**: 컴포넌트 폴더
-  - 예: `Calendar/`, `Memo/`
+  - >예: `Calendar/`, `Memo/`
   - 컴포넌트 파일과 이름 일치
   - 한눈에 컴포넌트 폴더임을 알 수 있음
   
 - **lowercase (소문자)**: 일반 폴더
-  - 예: `hooks/`, `utils/`, `styles/`
+  - >예: `hooks/`, `utils/`, `styles/`
   - 유틸리티나 설정 폴더에 사용
 
 **중요**: 일관성을 유지하자!
