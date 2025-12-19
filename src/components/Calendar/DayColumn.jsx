@@ -4,18 +4,18 @@ function DayColumn({ date, weekday }) {
 
   return (
     <div className={`
-      border rounded-lg p-2 min-h-[150px]
+      border rounded-lg min-h-[200px] 
       ${isToday ? 'bg-blue-50 border-blue-500' : 'bg-white border-gray-200'}
     `}>
       {/* 날짜 헤더 */}
-      <div className="text-center mb-2">
-        <div className="text-sm text-gray-600">{weekday}</div>
-        <div className={`
+      <div className="">
+        <span className="text-sm text-gray-600 mr-2">{weekday}</span>
+        <span className={`
           text-lg font-bold
           ${isToday ? 'text-blue-600' : 'text-gray-800'}
         `}>
           {dayNumber}
-        </div>
+        </span>
       </div>
 
       {/* 일정 영역 (나중에 추가) */}

@@ -34,7 +34,7 @@ function Memo() {
         <textarea
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          placeholder="메모를 입력하세요..."
+          placeholder="입력해주세요."
           className="w-full p-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
           rows="3"
         />
